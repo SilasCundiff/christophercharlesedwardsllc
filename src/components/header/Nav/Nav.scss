@@ -1,0 +1,324 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.Nav {
+  display: flex;
+  background-color: $color-primary;
+  flex-wrap: wrap;
+  color: $color-white;
+
+  font-family: $font-newsreader;
+  & .navToggler {
+    & i {
+      position: fixed;
+      top: 12px;
+      right: 8px;
+      transition: opacity 0.5s;
+      height: 32px;
+      width: 32px;
+      font-size: 32px;
+      z-index: 100;
+    }
+    & .fa-times {
+      font-size: 40px;
+      top: 8px;
+    }
+    & .hidden {
+      opacity: 0;
+      visibility: none;
+    }
+    & .visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+  }
+  & .navWrapper {
+    background-color: $color-black;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    transition: right 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    @include for-tablet-portrait-up {
+      flex: 1 1 80%;
+      position: relative;
+      height: 64px;
+    }
+    @include for-desktop-up {
+      flex: 1 1 70%;
+      padding: 2.4rem;
+    }
+    & ul {
+      height: 80%;
+      width: 100%;
+      margin: auto 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      font-size: calc(16px + 8vw);
+      gap: 2rem 0;
+      @include for-tablet-portrait-up {
+        flex-direction: row;
+        font-size: calc(16px + 2vw);
+      }
+      @include for-desktop-up {
+        font-size: calc(16px + 1vw);
+      }
+      & li {
+        flex: 1 1 100%;
+        @include centerContent;
+        & a {
+          @include linkReset;
+        }
+      }
+    }
+  }
+  & .open {
+    right: 0;
+  }
+  & .closed {
+    right: -100vw;
+    @include for-tablet-portrait-up {
+      right: 0;
+    }
+  }
+  & .contactBanner {
+    height: 64px;
+    width: 100%;
+    font-size: calc(16px + 4vw);
+    cursor: pointer;
+    font-family: $font-merriweather;
+    text-transform: uppercase;
+    @include centerContent;
+    @include for-tablet-portrait-up {
+      padding: 2rem;
+      font-size: calc(16px + 2vw);
+    }
+    @include for-desktop-up {
+      flex: 1 1 30%;
+      padding: 2.4rem;
+    }
+  }
+}
+
+// .Nav {
+//   display: flex;
+
+//   & .logo {
+//     flex-basis: 30%;
+//     background-color: ${(props) => props.theme.colors.primary};
+//     text-transform: uppercase;
+//     display: flex;
+//     text-align: left;
+//     padding: 1rem;
+
+//     & a {
+//       margin: auto;
+//       font-size: calc(0.3rem + 1.6vw);
+//       font-family: ${(props) => props.theme.fonts.secondary};
+//     }
+//   }
+//   & .navToggler {
+//     display: none;
+//     position: absolute;
+//   }
+
+//   & .navWrapper {
+//     flex: 1 1 100%;
+//     display: flex;
+//     background-color: ${(props) => props.theme.colors.black};
+//     color: ${(props) => props.theme.colors.tertiary};
+//     & .contactBannerWrapper {
+//       flex: 1 1 40%;
+//       display: flex;
+//       cursor: pointer;
+//       background-color: ${(props) => props.theme.colors.tertiary};
+//       & .contactBanner {
+//         height: 100%;
+//         width: 100%;
+//         padding: 1.2rem 0;
+//         color: ${(props) => props.theme.colors.white};
+//         /* text-align: center; */
+//         background: url(${pattern}) 400% 400%;
+//         /* padding: 0.8rem; */
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         & .contactBtn {
+//           font-size: calc(1.4rem + 0.8vw);
+//           text-transform: uppercase;
+//           text-align: center;
+//         }
+//         & .subText {
+//           font-size: calc(0.8rem + 0.6vw);
+//         }
+//       }
+//     }
+//     & nav {
+//       flex: 1 1 100%;
+//       background-color: ${(props) => props.theme.colors.white};
+//       position: relative;
+//       z-index: 10;
+//       & ul {
+//         border-top: solid ${(props) => props.theme.colors.complementary} 5px;
+//         display: flex;
+//         padding: 2rem 0 0;
+//         list-style: none;
+//         text-transform: uppercase;
+//         width: 100%;
+//         & li {
+//           margin: auto auto 1.6rem;
+
+//           & a {
+//             font-size: calc(1.6rem + 1vw);
+//             font-family: ${(props) => props.theme.fonts.secondary};
+//             font-weight: 300;
+//             padding: 1.2rem;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   @media screen and (max-width: 1600px) {
+//     & .logo {
+//       text-align: left;
+//       padding: 1rem;
+
+//       & a {
+//         font-size: calc(0.3rem + 1.5vw);
+//       }
+//     }
+//   }
+//   @media screen and (max-width: 1200px) {
+//     /* Media size for tablets landscape */
+//     flex-direction: column;
+//     & .logo {
+//       padding: 2rem 8%;
+
+//       & a {
+//         margin: auto;
+//         font-size: calc(0.3rem + 4.6vw);
+//         font-family: ${(props) => props.theme.fonts.secondary};
+//       }
+//     }
+//     & .navToggler {
+//       display: block;
+//       z-index: 1000;
+
+//       & i {
+//         position: fixed;
+//         top: 1%;
+//         right: 1%;
+//         transition: opacity 0.5s;
+//         height: 64px;
+//         width: 64px;
+//         font-size: 64px;
+//       }
+//       & .fa-times {
+//         font-size: 78px;
+//         top: 0.5%;
+//       }
+//     }
+//     & .hidden {
+//       opacity: 0;
+//       visibility: none;
+//     }
+//     & .visible {
+//       opacity: 1;
+//       visibility: visible;
+//     }
+//     & .navWrapper {
+//       & .contactBannerWrapper {
+//         & .contactBanner {
+//           padding: 2rem;
+
+//           & .contactBtn {
+//             font-size: calc(1.4rem + 2.2vw);
+//           }
+//           & .subText {
+//             font-size: calc(0.8rem + 1.2vw);
+//           }
+//         }
+//       }
+
+//       & nav {
+//         position: fixed;
+//         height: 100vh;
+//         width: 100vw;
+//         top: 0;
+//         right: 0;
+//         margin: 0;
+//         padding: 0;
+//         display: flex;
+//         z-index: 100;
+//         transition: all 0.5s;
+//         background-color: ${(props) => props.theme.colors.black};
+
+//         & ul {
+//           border-top: none;
+//           padding: 0;
+//           flex-direction: column;
+//           & li {
+//             margin: auto;
+
+//             & a {
+//               font-size: calc(1.6rem + 5vw);
+//               font-family: ${(props) => props.theme.fonts.secondary};
+//               color: ${(props) => props.theme.colors.white};
+//               font-weight: 300;
+//               padding: 1.2rem;
+//             }
+//           }
+//         }
+//       }
+//       & .open {
+//         right: 0;
+//       }
+//       & .closed {
+//         right: -100vw;
+//       }
+//     }
+//   }
+//   @media (max-width: 600px) {
+//     & .logo {
+//       padding: 1.4rem;
+
+//       & a {
+//         font-size: calc(0.3rem + 5.8vw);
+//       }
+//     }
+//     & .navToggler {
+//       & i {
+//         position: fixed;
+//         top: 1%;
+//         right: 2%;
+//         transition: opacity 0.5s;
+//         height: 32px;
+//         width: 32px;
+//         font-size: 32px;
+//       }
+//       & .fa-times {
+//         font-size: 42px;
+//         top: 0.5%;
+//       }
+//     }
+//     & .navWrapper {
+//       & .contactBannerWrapper {
+//         & .contactBanner {
+//           padding: 1rem;
+
+//           text-align: center;
+//           & .contactBtn {
+//             font-size: calc(1.4rem + 3.2vw);
+//           }
+//           & .subText {
+//             font-size: calc(0.8rem + 2.2vw);
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
