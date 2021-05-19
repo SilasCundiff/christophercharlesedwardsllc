@@ -1,0 +1,8 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+.PatternDivider {
+  background: center
+    url('../../../../assets/images/resized/vintage-wallpaper@1x.png');
+  height: 20vh;
+  width: 100%;
+}

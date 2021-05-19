@@ -1,2 +1,15 @@
 @import 'variables.scss';
 @import 'mixins.scss';
+
+.Footer {
+  min-height: 20vh;
+  background: center url('../../assets/images/resized/vintage-wallpaper@1x.png');
+  font-family: $font-newsreader;
+  @include centerContent;
+  & .copyright {
+    font-size: calc(8px + 2vw);
+    padding: calc(16px + 0.6vh) calc(8px + 0.4vw);
+    color: $color-complementary;
+    font-weight: bold;
+  }
+}

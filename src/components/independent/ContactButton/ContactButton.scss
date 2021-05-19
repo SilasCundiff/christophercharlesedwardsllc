@@ -1,0 +1,20 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+.contact {
+  height: 64px;
+  width: 100%;
+  font-size: calc(16px + 4vw);
+  cursor: pointer;
+  font-family: $font-merriweather;
+  text-transform: uppercase;
+  background-color: $color-primary;
+  @include centerContent;
+  @include for-tablet-portrait-up {
+    padding: 2rem;
+    font-size: calc(16px + 2vw);
+  }
+  @include for-desktop-up {
+    flex: 1 1 30%;
+    padding: 2.4rem;
+  }
+}

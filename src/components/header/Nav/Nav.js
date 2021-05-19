@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import ContactButton from '../../independent/ContactButton/ContactButton';
 import './Nav.scss';
 
 function Nav({ handleClickModal }) {
   const [toggled, setToggled] = useState(true);
 
   const handleClick = () => {
+    // setWindowOffset(window.scrollY);
     setToggled(!toggled);
   };
   const closeNav = () => {
@@ -36,9 +38,7 @@ function Nav({ handleClickModal }) {
           </li>
         </ul>
       </nav>
-      <div className='contactBanner' onClick={handleClickModal}>
-        <div className='contactBtn'>Click To Talk</div>
-      </div>
+      <ContactButton handleClickModal={handleClickModal} />
     </nav>
   );
 }

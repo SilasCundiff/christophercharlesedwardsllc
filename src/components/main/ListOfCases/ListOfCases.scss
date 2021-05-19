@@ -1,2 +1,13 @@
 @import 'variables.scss';
 @import 'mixins.scss';
+
+.open {
+  height: auto;
+  max-height: 20000px;
+  transition: all 0.5s;
+}
+.closed {
+  max-height: 30vh;
+  overflow: hidden;
+  transition: all 0.5s;
+}

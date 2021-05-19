@@ -4,9 +4,9 @@
 .Nav {
   display: flex;
   background-color: $color-primary;
+
   flex-wrap: wrap;
   color: $color-white;
-
   font-family: $font-newsreader;
   & .navToggler {
     & i {
@@ -36,16 +36,18 @@
     }
   }
   & .navWrapper {
-    background-color: $color-black;
+    background: center
+      url('../../../assets/images/resized/vintage-wallpaper@1x.png');
     position: fixed;
     width: 100vw;
     height: 100vh;
     display: flex;
-    transition: right 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
     @include for-tablet-portrait-up {
       flex: 1 1 80%;
       position: relative;
       height: 64px;
+      background: $color-secondary;
     }
     @include for-desktop-up {
       flex: 1 1 70%;
@@ -70,6 +72,7 @@
       & li {
         flex: 1 1 100%;
         @include centerContent;
+        background-color: rgba($color: $color-black, $alpha: 0.8);
         & a {
           @include linkReset;
         }
@@ -78,28 +81,14 @@
   }
   & .open {
     right: 0;
+    opacity: 1;
   }
   & .closed {
     right: -100vw;
+    opacity: 0;
     @include for-tablet-portrait-up {
       right: 0;
-    }
-  }
-  & .contactBanner {
-    height: 64px;
-    width: 100%;
-    font-size: calc(16px + 4vw);
-    cursor: pointer;
-    font-family: $font-merriweather;
-    text-transform: uppercase;
-    @include centerContent;
-    @include for-tablet-portrait-up {
-      padding: 2rem;
-      font-size: calc(16px + 2vw);
-    }
-    @include for-desktop-up {
-      flex: 1 1 30%;
-      padding: 2.4rem;
+      opacity: 1;
     }
   }
 }
