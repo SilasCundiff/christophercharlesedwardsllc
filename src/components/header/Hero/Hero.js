@@ -3,7 +3,7 @@ import './Hero.scss';
 
 import HeroImageSmall from '../../../assets/images/resized/5-mabrafirmmarch2020_6325@0.25x.png';
 import HeroImageMed from '../../../assets/images/resized/5-mabrafirmmarch2020_6325@0.5x.png';
-import HeroImageLarge from '../../../assets/images/resized/5-mabrafirmmarch2020_6325@1x.png';
+import HeroImageLarge from '../../../assets/images/resized/5-mabrafirmmarch2020_6325.png';
 
 function Header() {
   return (

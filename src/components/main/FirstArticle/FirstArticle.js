@@ -2,7 +2,7 @@ import React from 'react';
 
 import NewsImageSmall from '../../../assets/images/resized/1-mabrafirmmarch2020_6307@0.25x.png';
 import NewsImageMed from '../../../assets/images/resized/1-mabrafirmmarch2020_6307@0.5x.png';
-import NewsImageLarge from '../../../assets/images/resized/1-mabrafirmmarch2020_6307@1x.png';
+import NewsImageLarge from '../../../assets/images/resized/1-mabrafirmmarch2020_6307.png';
 import './FirstArticle.scss';
 const FirstArticle = () => {
   return (
