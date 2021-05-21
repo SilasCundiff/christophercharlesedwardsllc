@@ -1,5 +1,6 @@
 import React from 'react';
 import './Hero.scss';
+
 import HeroImageSmall from '../../../assets/images/resized/5-mabrafirmmarch2020_6325@0.25x.png';
 import HeroImageMed from '../../../assets/images/resized/5-mabrafirmmarch2020_6325@0.5x.png';
 
@@ -18,7 +19,7 @@ function Header() {
         <img
           src={HeroImageSmall}
           alt='a portrait of Christopher Charles Edwards'
-          srcSet={`${HeroImageSmall} 300w, ${HeroImageMed} 768w`}
+          srcSet={`${HeroImageSmall} 600w,  ${HeroImageMed} 1200w`}
         />
       </div>
       <p className='pitch'>

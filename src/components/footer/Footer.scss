@@ -3,7 +3,9 @@
 
 .Footer {
   min-height: 20vh;
-  background: center url('../../assets/images/resized/vintage-wallpaper@1x.png');
+  background: center no-repeat
+    url('../../assets/images/resized/vintage-wallpaper@0.5x.png');
+  background-size: 100%;
   font-family: $font-newsreader;
   @include centerContent;
   & .copyright {

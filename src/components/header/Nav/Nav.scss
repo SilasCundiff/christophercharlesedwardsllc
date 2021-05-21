@@ -36,9 +36,7 @@
     }
   }
   & .navWrapper {
-    background: center
-      url('../../../assets/images/resized/vintage-wallpaper@1x.png')
-      $color-black;
+    background: $color-black;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -73,7 +71,7 @@
       & li {
         flex: 1 1 100%;
         @include centerContent;
-        background-color: rgba($color: $color-black, $alpha: 0.8);
+        background-color: $color-secondary;
         & a {
           @include linkReset;
         }

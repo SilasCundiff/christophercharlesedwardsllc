@@ -14,7 +14,7 @@
     padding-bottom: 0.5rem;
     text-align: center;
   }
-  & h4 {
+  & div {
     font-size: calc(8px + 2vw);
     font-weight: lighter;
     padding-bottom: 0.8rem;
@@ -59,12 +59,14 @@
       display: flex;
       flex-wrap: wrap;
       padding: 1rem 10% 0.5rem;
-      background: center
-        url('../../../assets/images/resized/vintage-wallpaper@1x.png');
+      background: center no-repeat
+        url('../../../assets/images/resized/vintage-wallpaper@0.5x.png');
+      background-size: 90%;
     }
     & figure {
-      background: center
-        url('../../../assets/images/resized/vintage-wallpaper@1x.png');
+      background: center no-repeat
+        url('../../../assets/images/resized/vintage-wallpaper@0.5x.png');
+      background-size: 100%;
       @include for-desktop-up {
         flex: 1 1 50%;
         background: transparent;
@@ -110,6 +112,12 @@
     p {
       margin-top: 1.4rem;
       font-size: calc(16px + 0.4vw);
+      word-wrap: break-word;
+      -ms-hyphens: auto;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+      padding: 0 10px;
       @include for-desktop-up {
         margin-top: 2.4rem;
         font-size: calc(16px + 1.2vw);

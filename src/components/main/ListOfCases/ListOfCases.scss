@@ -32,7 +32,10 @@
     flex-wrap: wrap;
     font-size: calc(16px + 1.2vw);
     position: relative;
-
+    margin-bottom: 4rem;
+    @include for-tablet-landscape-up {
+      padding: 0 0 0 10%;
+    }
     @include for-desktop-up {
       padding: 0 0 0 20%;
       margin: 2rem 0;
@@ -41,12 +44,14 @@
       display: flex;
       width: 100%;
       position: absolute;
-      bottom: -6%;
+      bottom: -4%;
       left: 0;
-
+      @include for-desktop-up {
+        bottom: -6%;
+      }
       & i {
         font-size: calc(16px + 3vw);
-        margin: 0.6rem auto 0;
+        margin: auto;
         padding-right: 1.6rem;
         cursor: pointer;
         color: $color-tertiary;
@@ -62,7 +67,7 @@
     }
     & .fader {
       position: absolute;
-      bottom: 0;
+      bottom: -6%;
       left: 0;
       width: 100%;
       background: linear-gradient(rgba(23, 23, 23, 0.1), rgba(23, 23, 23, 100));
@@ -70,7 +75,7 @@
     }
     & li {
       flex: 1 1 100%;
-      @include for-desktop-up {
+      @include for-tablet-landscape-up {
         flex: 1 1 50%;
       }
     }

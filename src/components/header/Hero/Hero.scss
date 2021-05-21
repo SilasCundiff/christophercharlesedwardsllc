@@ -2,8 +2,7 @@
 @import 'mixins.scss';
 
 .Hero {
-  background: center
-    url('../../../assets/images/resized/vintage-wallpaper@1x.png');
+  background: $color-black;
   color: $color-white;
   @include for-desktop-up {
     display: flex;
@@ -44,6 +43,7 @@
     width: 100%;
     & img {
       width: 100%;
+
       @include for-desktop-up {
         margin: auto;
         padding: 2rem;

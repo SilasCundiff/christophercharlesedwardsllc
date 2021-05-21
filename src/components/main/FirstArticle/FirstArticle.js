@@ -1,4 +1,5 @@
 import React from 'react';
+
 import NewsImageSmall from '../../../assets/images/resized/1-mabrafirmmarch2020_6307@0.25x.png';
 import NewsImageMed from '../../../assets/images/resized/1-mabrafirmmarch2020_6307@0.5x.png';
 import './FirstArticle.scss';
@@ -8,7 +9,7 @@ const FirstArticle = () => {
       <h2 className='source'>
         News article from: <br /> the Citizen Newspaper
       </h2>
-      <h4 className='permission'>reprinted with express permission</h4>
+      <div className='permission'>reprinted with express permission</div>
       <hr />
       <figure>
         <h3>
@@ -25,7 +26,7 @@ const FirstArticle = () => {
             <img
               src={NewsImageSmall}
               alt='a portrait of Christopher Charles Edwards'
-              srcSet={`${NewsImageSmall} 300w, ${NewsImageMed} 768w`}
+              srcSet={`${NewsImageSmall} 600w, ${NewsImageMed} 1200w,`}
               className='portrait'
             />
             <figcaption className='portrait-caption'>
