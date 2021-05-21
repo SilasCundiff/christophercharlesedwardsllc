@@ -2,7 +2,9 @@
 @import 'mixins.scss';
 
 .Hero {
-  background: $color-black;
+  background: center
+    url('../../../assets/images/resized/vintage-wallpaper@0.5x.png');
+  background-size: 100%;
   color: $color-white;
   @include for-desktop-up {
     display: flex;
