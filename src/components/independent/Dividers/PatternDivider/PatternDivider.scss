@@ -5,4 +5,7 @@
     url('../../../../assets/images/resized/vintage-wallpaper@1x.png');
   height: 20vh;
   width: 100%;
+  @include for-desktop-up {
+    height: 40vh;
+  }
 }

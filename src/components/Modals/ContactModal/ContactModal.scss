@@ -3,4 +3,48 @@
 
 .ContactModal {
   @include modalStyles($color-deepblack);
+  height: auto;
+  overflow-y: scroll;
+
+  & .wrapper {
+    width: 100%;
+    // height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10vh;
+    @include for-desktop-up {
+      padding: 0 5%;
+    }
+    & .pitch {
+      font-size: calc(14px + 1.4vw);
+
+      font-family: $font-merriweather;
+      padding: 1.2rem 1.2rem;
+      text-align: justify;
+      color: $color-complementary;
+      @include for-desktop-up {
+        padding: 0 5%;
+      }
+    }
+    & h3 {
+      flex: 1 1 100%;
+      font-size: calc(12px + 3vw);
+      text-align: left;
+      padding: 0.6rem 1.4rem;
+      text-transform: uppercase;
+      @include for-desktop-up {
+        text-align: center;
+        margin-top: 2rem;
+        font-size: calc(12px + 2vw);
+      }
+    }
+    & a {
+      @include linkReset;
+      padding: 0.5vh 1vw;
+      margin: 0.5rem 0;
+      font-size: calc(20px + 2vw);
+      cursor: pointer;
+      width: 100%;
+    }
+  }
 }

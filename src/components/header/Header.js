@@ -4,7 +4,7 @@ import Hero from './Hero/Hero.js';
 import './Header.scss';
 const Header = ({ handleClickModal, windowOffset, setWindowOffset }) => {
   return (
-    <header className='Header'>
+    <header className='Header' id='Home'>
       <Nav
         handleClickModal={handleClickModal}
         windowOffset={windowOffset}

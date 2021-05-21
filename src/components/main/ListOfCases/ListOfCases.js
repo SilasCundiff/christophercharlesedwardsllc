@@ -6,9 +6,9 @@ const ListOfCases = () => {
     setListOpen(!listOpen);
   };
   return (
-    <div>
+    <div className='ListOfCases' id='Information'>
       <h3>All major civil and criminal cases, including:</h3>
-      <ul className={`${listOpen ? 'open' : 'closed'}`}>
+      <ul className={`list ${listOpen ? 'open' : 'closed'}`}>
         <li>Amputation</li>
         <li>Asbestos</li>
         <li>Assault</li>
@@ -55,21 +55,21 @@ const ListOfCases = () => {
         <li>Slander</li>
         <li>Spinal Cord Injury</li>
         <li>Teflon</li>
-
         <li>Truck Accidents</li>
         <li>Trusts</li>
         <li>Vehicle Accidents</li>
-
         <li>Workers' Compensation</li>
-
-        <div className={`${listOpen ? '' : 'fader'}`}></div>
+        <div className={`${listOpen ? '' : 'fader'} faderContainer`}>
+          <i
+            className={listOpen ? `fas fa-caret-up` : `fas fa-caret-down`}
+            onClick={handleClick}
+          >
+            <span className='showmoreBtn'>
+              Show {listOpen ? 'Less' : 'More'}
+            </span>
+          </i>
+        </div>
       </ul>
-      <i
-        className={listOpen ? `fas fa-caret-up` : `fas fa-caret-down`}
-        onClick={handleClick}
-      >
-        <span className='showmoreBtn'>Show {listOpen ? 'Less' : 'More'}</span>
-      </i>
     </div>
   );
 };

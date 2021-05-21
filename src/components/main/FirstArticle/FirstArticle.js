@@ -4,8 +4,10 @@ import NewsImageMed from '../../../assets/images/resized/1-mabrafirmmarch2020_63
 import './FirstArticle.scss';
 const FirstArticle = () => {
   return (
-    <div>
-      <h2>News article from the Citizen Newspaper</h2>
+    <div className='FirstArticle' id='Articles'>
+      <h2 className='source'>
+        News article from: <br /> the Citizen Newspaper
+      </h2>
       <h4 className='permission'>reprinted with express permission</h4>
       <hr />
       <figure>
@@ -13,7 +15,9 @@ const FirstArticle = () => {
           Chief Judge Edwards to resign within 2 years, will go back to being a
           ‘jury trial lawyer’
         </h3>
-        <figcaption>By Cal Beverly - December 4, 2020</figcaption>
+        <figcaption className='author'>
+          By Cal Beverly - December 4, 2020
+        </figcaption>
       </figure>
       <article>
         <section className='article-heading'>
@@ -22,16 +26,19 @@ const FirstArticle = () => {
               src={NewsImageSmall}
               alt='a portrait of Christopher Charles Edwards'
               srcSet={`${NewsImageSmall} 300w, ${NewsImageMed} 768w`}
+              className='portrait'
             />
-            <figcaption>
+            <figcaption className='portrait-caption'>
               Christopher Edwards, chief judge of the 4-county Griffin Judicial
               Circuit. Photo/Submitted.
             </figcaption>
           </figure>
-          <h3>
+          <h3 className='quote'>
             After 22 years as a superior court judge for Fayette County and the
-            rest of the Griffin Judicial Circuit, Edwards says, ‘I am most fully
-            myself as a trial lawyer’ —
+            rest of the Griffin Judicial Circuit, Edwards says,{' '}
+            <span className='highlight'>
+              <br /> ‘I am most fully myself as a trial lawyer’ —
+            </span>{' '}
           </h3>
         </section>
         <section className='article-body'>

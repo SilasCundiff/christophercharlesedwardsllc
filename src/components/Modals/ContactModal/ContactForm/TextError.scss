@@ -4,9 +4,9 @@
 .TextError {
   color: $color-error;
   padding: 0;
-  margin: 0 auto;
+
   font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1980 - 300)));
-  margin-bottom: 0;
+
   text-align: left;
-  margin-left: 15%;
+  margin-left: 25%;
 }

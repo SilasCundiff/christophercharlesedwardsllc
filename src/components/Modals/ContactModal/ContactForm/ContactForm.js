@@ -82,89 +82,94 @@ const ContactForm = () => {
     >
       {() => (
         <Form name='contact' data-netlify={true}>
-          <div className='mainInfoContainer'>
-            <div className='name'>
-              <label htmlFor='name'>Name: </label>
-              <Field type='text' id='name' name='name' />
-              <ErrorMessage name='name' component={TextError} />
-            </div>
-
-            <div className='email'>
-              <label htmlFor='email'>Email: </label>
-              <Field type='email' id='email' name='email' />
-              <ErrorMessage name='email' component={TextError} />
-            </div>
-            <div className='phone'>
-              <label htmlFor='phone'>Phone: </label>
-              <Field type='phone' id='phone' name='phone' />
-              <ErrorMessage name='phone' component={TextError} />
-            </div>
-          </div>
-
-          <div className='extraInfoContainer'>
-            <div className='leftExtraInfo'>
-              <div className='represented'>
-                Are you currently represented by another lawyer?
+          <div className='Form'>
+            <div className='primary-information'>
+              <div className='name'>
+                <label htmlFor='name'>Name: </label>
+                <Field type='text' id='name' name='name' />
+                <ErrorMessage name='name' component={TextError} />
               </div>
-              <div
-                className='radioGroup'
-                role='group'
-                aria-labelledby='my-radio-group'
-              >
-                <label>
-                  <Field type='radio' name='represented' value='Yes' />
-                  Yes
+
+              <div className='email'>
+                <label htmlFor='email'>Email: </label>
+                <Field type='email' id='email' name='email' />
+                <ErrorMessage name='email' component={TextError} />
+              </div>
+              <div className='phone'>
+                <label htmlFor='phone'>Phone: </label>
+                <Field type='phone' id='phone' name='phone' />
+                <ErrorMessage name='phone' component={TextError} />
+              </div>
+            </div>
+
+            <div className='secondary-information'>
+              <div className='leftExtraInfo'>
+                <div className='represented'>
+                  Are you currently represented by another lawyer?
+                </div>
+                <div
+                  className='radioGroup'
+                  role='group'
+                  aria-labelledby='my-radio-group'
+                >
+                  <label>
+                    <Field type='radio' name='represented' value='Yes' />
+                    Yes
+                  </label>
+                  <label>
+                    <Field type='radio' name='represented' value='No' />
+                    No
+                  </label>
+
+                  <ErrorMessage name='represented' component={TextError} />
+                </div>
+              </div>
+              <div className='rightExtraInfo'>
+                <div className='date'>
+                  <label className='date-label' htmlFor='date'>
+                    Date of the incident:
+                  </label>
+                  <Field id='date' name='date'>
+                    {({ form, field }) => {
+                      const { setFieldValue } = form;
+                      const { value } = field;
+                      return (
+                        <DatePicker
+                          {...field}
+                          id='date'
+                          selected={value}
+                          onChange={(val) => {
+                            setFieldValue('date', val);
+                          }}
+                          dateFormat='MMMM d, yyyy'
+                          peekNextMonth
+                          showMonthDropdown
+                          showYearDropdown
+                          minDate={new Date('1950-1-1')}
+                          maxDate={addDays(new Date(), 5)}
+                          popperPlacement='auto'
+                        />
+                      );
+                    }}
+                  </Field>
+                  <ErrorMessage name='date' component={TextError} />
+                </div>
+              </div>
+            </div>
+
+            <div className='detailed-information'>
+              <div className='message'>
+                <label htmlFor='message'>
+                  Describe your legal issues and the causes:
                 </label>
-                <label>
-                  <Field type='radio' name='represented' value='No' />
-                  No
-                </label>
-
-                <ErrorMessage name='represented' component={TextError} />
+                <Field name='message' id='message' as='textarea' />
+                <ErrorMessage name='message' component={TextError} />
               </div>
-            </div>
-            <div className='rightExtraInfo'>
-              <div className='date'>
-                <label htmlFor='date'>Date of the incident:</label>
-                <Field id='date' name='date'>
-                  {({ form, field }) => {
-                    const { setFieldValue } = form;
-                    const { value } = field;
-                    return (
-                      <DatePicker
-                        {...field}
-                        id='date'
-                        selected={value}
-                        onChange={(val) => {
-                          setFieldValue('date', val);
-                        }}
-                        dateFormat='MMMM d, yyyy'
-                        peekNextMonth
-                        showMonthDropdown
-                        showYearDropdown
-                        minDate={new Date('1950-1-1')}
-                        maxDate={addDays(new Date(), 5)}
-                      />
-                    );
-                  }}
-                </Field>
-                <ErrorMessage name='date' component={TextError} />
-              </div>
-            </div>
-          </div>
 
-          <div className='finalInfoContainer'>
-            <div className='message'>
-              <label htmlFor='message'>
-                Describe your legal issues and the causes:
-              </label>
-              <Field name='message' id='message' as='textarea' />
-              <ErrorMessage name='message' component={TextError} />
+              <button className='submitBtn' type='submit'>
+                Submit Form
+              </button>
             </div>
-
-            <button className='submitBtn' type='submit'>
-              Submit Form
-            </button>
           </div>
           <ToastContainer className='toaster' />
         </Form>

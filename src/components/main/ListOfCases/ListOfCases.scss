@@ -1,13 +1,87 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
-.open {
-  height: auto;
-  max-height: 20000px;
-  transition: all 0.5s;
-}
-.closed {
-  max-height: 30vh;
-  overflow: hidden;
-  transition: all 0.5s;
+.ListOfCases {
+  padding: 0.4rem;
+  margin-top: 8vh;
+  display: flex;
+  flex-direction: column;
+  @include for-desktop-up {
+    padding: 0;
+    margin-bottom: 5%;
+  }
+  & h3 {
+    font-size: calc(16px + 1.8vw);
+    font-weight: 900;
+    margin-bottom: 2vh;
+    color: $color-complementary;
+    font-family: $font-merriweather;
+    @include for-desktop-up {
+      margin: 0 auto;
+    }
+  }
+  & ::marker {
+    font-size: calc(16px + 2.2vw);
+    color: $color-complementary;
+  }
+
+  & ul {
+    text-transform: capitalize;
+    display: flex;
+    padding-left: 2rem;
+    flex-wrap: wrap;
+    font-size: calc(16px + 1.2vw);
+    position: relative;
+
+    @include for-desktop-up {
+      padding: 0 0 0 20%;
+      margin: 2rem 0;
+    }
+    & .faderContainer {
+      display: flex;
+      width: 100%;
+      position: absolute;
+      bottom: -6%;
+      left: 0;
+
+      & i {
+        font-size: calc(16px + 3vw);
+        margin: 0.6rem auto 0;
+        padding-right: 1.6rem;
+        cursor: pointer;
+        color: $color-tertiary;
+
+        @include for-desktop-up {
+          font-size: calc(16px + 1.8vw);
+        }
+        & span {
+          padding-left: 1.6rem;
+          font-family: $font-merriweather;
+        }
+      }
+    }
+    & .fader {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(rgba(23, 23, 23, 0.1), rgba(23, 23, 23, 100));
+      height: 10vh;
+    }
+    & li {
+      flex: 1 1 100%;
+      @include for-desktop-up {
+        flex: 1 1 50%;
+      }
+    }
+  }
+
+  & .open {
+    height: auto;
+    max-height: 20000px;
+  }
+  & .closed {
+    max-height: 30vh;
+    overflow: hidden;
+  }
 }

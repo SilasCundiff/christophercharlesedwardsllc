@@ -20,14 +20,14 @@ function Header() {
           alt='a portrait of Christopher Charles Edwards'
           srcSet={`${HeroImageSmall} 300w, ${HeroImageMed} 768w`}
         />
-        <p className='pitch'>
-          After a highly successful career as a trial lawyer and hundred of jury
-          trials as a judge, Chris Edwards is a trial lawyer again, now
-          available to represent you through: any - <strong>any</strong> - major
-          civil or criminal case including jury trial - to help conclude your
-          case as an arbitrator or mediator.
-        </p>
       </div>
+      <p className='pitch'>
+        After a highly successful career as a trial lawyer and hundred of jury
+        trials as a judge, Chris Edwards is a trial lawyer again, now available
+        to represent you through: any - <strong>any</strong> - major civil or
+        criminal case including jury trial - to help conclude your case as an
+        arbitrator or mediator.
+      </p>
     </div>
   );
 }

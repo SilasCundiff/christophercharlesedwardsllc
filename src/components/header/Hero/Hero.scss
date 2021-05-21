@@ -5,6 +5,11 @@
   background: center
     url('../../../assets/images/resized/vintage-wallpaper@1x.png');
   color: $color-white;
+  @include for-desktop-up {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+  }
   & .text-wrapper {
     display: flex;
     flex-direction: column;
@@ -12,11 +17,17 @@
     align-items: center;
     font-family: $font-newsreader;
     padding: 1rem 0.5rem;
-
+    @include for-desktop-up {
+      flex: 1 1 50%;
+    }
     & h1,
     & h2 {
       font-size: calc(16px + 9vw);
       line-height: 1;
+      @include for-desktop-up {
+        font-size: calc(16px + 5vw);
+        text-align: center;
+      }
     }
     & h1 {
       margin-top: 0.6rem;
@@ -26,19 +37,32 @@
     }
   }
   & .HeroImage {
+    @include for-desktop-up {
+      flex: 1 1 50%;
+      display: flex;
+    }
     width: 100%;
     & img {
       width: 100%;
-    }
-    & p {
-      font-size: calc(16px + 2.2vw);
-      margin-top: 0.6rem;
-      font-family: $font-merriweather;
-      padding: 0 0.8rem;
-      text-align: justify;
-      & strong {
-        color: $color-complementary;
+      @include for-desktop-up {
+        margin: auto;
+        padding: 2rem;
+        border-radius: 9%;
       }
+    }
+  }
+  & p {
+    font-size: calc(16px + 2.2vw);
+
+    font-family: $font-merriweather;
+    padding: 1rem 0.8rem;
+    text-align: justify;
+    @include for-desktop-up {
+      font-size: calc(16px + 1.2vw);
+      padding: 3rem 15%;
+    }
+    & strong {
+      color: $color-complementary;
     }
   }
 }

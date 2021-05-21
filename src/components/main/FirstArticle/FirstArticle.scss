@@ -1,8 +1,119 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
-.article-heading {
-  & img {
-    width: 100%;
+.FirstArticle {
+  font-family: $font-merriweather;
+  // text-align: center;
+  & .highlight {
+    color: $color-tertiary;
+  }
+  & h2 {
+    font-size: calc(16px + 3vw);
+    color: $color-tertiary;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+  & h4 {
+    font-size: calc(8px + 2vw);
+    font-weight: lighter;
+    padding-bottom: 0.8rem;
+    text-align: center;
+  }
+  & hr {
+    margin: 1rem 0;
+  }
+
+  & figure h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: calc(16px + 3.8vw);
+    font-weight: 900;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    font-family: $font-newsreader;
+    line-height: 1.2;
+    @include for-desktop-up {
+      font-size: calc(16px + 2.8vw);
+      padding: 0 4rem;
+      max-width: 80%;
+      margin: 2rem auto;
+    }
+  }
+  & .author {
+    font-size: calc(16px + 0.6vw);
+    color: $color-complementary;
+    text-align: left;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    @include for-desktop-up {
+      padding: 0 4rem;
+      max-width: 80%;
+      margin: 2rem auto;
+    }
+  }
+  & .article-heading {
+    @include for-desktop-up {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1rem 10% 0.5rem;
+      background: center
+        url('../../../assets/images/resized/vintage-wallpaper@1x.png');
+    }
+    & figure {
+      background: center
+        url('../../../assets/images/resized/vintage-wallpaper@1x.png');
+      @include for-desktop-up {
+        flex: 1 1 50%;
+        background: transparent;
+      }
+    }
+
+    & img {
+      width: 100%;
+      @include for-desktop-up {
+        width: 85%;
+      }
+    }
+    & .portrait-caption {
+      font-size: calc(8px + 1.6vw);
+      margin: 0.2rem 0;
+      padding: 0.8rem;
+      color: $color-complementary;
+      @include for-desktop-up {
+        font-size: calc(8px + 1.4vw);
+      }
+    }
+    & .quote {
+      padding: 0.8rem;
+      font-weight: 900;
+      font-size: calc(16px + 2vw);
+      font-family: $font-newsreader;
+      line-height: 1.4;
+      @include for-desktop-up {
+        flex: 1 1 50%;
+        background: transparent;
+        padding: 0 1.4rem;
+        font-size: calc(16px + 2vw);
+        margin: auto;
+      }
+    }
+  }
+  & .article-body {
+    padding: 0.8rem;
+    @include for-desktop-up {
+      padding: 0 10%;
+      margin-bottom: 4rem;
+    }
+    p {
+      margin-top: 1.4rem;
+      font-size: calc(16px + 0.4vw);
+      @include for-desktop-up {
+        margin-top: 2.4rem;
+        font-size: calc(16px + 1.2vw);
+      }
+    }
   }
 }

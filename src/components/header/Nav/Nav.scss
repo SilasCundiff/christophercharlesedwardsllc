@@ -37,7 +37,8 @@
   }
   & .navWrapper {
     background: center
-      url('../../../assets/images/resized/vintage-wallpaper@1x.png');
+      url('../../../assets/images/resized/vintage-wallpaper@1x.png')
+      $color-black;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -51,7 +52,7 @@
     }
     @include for-desktop-up {
       flex: 1 1 70%;
-      padding: 2.4rem;
+      padding: 3rem 2.4rem;
     }
     & ul {
       height: 80%;

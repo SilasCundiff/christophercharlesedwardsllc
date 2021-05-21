@@ -4,7 +4,7 @@ import Header from './components/header/Header.js';
 import Main from './components/main/Main.js';
 import './scss/global.scss';
 import Footer from './components/footer/Footer';
-import BlackDivider from './components/independent/Dividers/BlackDivider/BlackDivider';
+
 import AgreementModal from './components/Modals/AgreementModal/AgreementModal';
 import ContactModal from './components/Modals/ContactModal/ContactModal';
 
@@ -27,10 +27,14 @@ function App() {
   };
 
   return (
-    <div>
+    <div
+      className={`appBody ${
+        agreementModalOpen || contactModalOpen ? 'no-scroll' : 'scroll'
+      }`}
+    >
       <Header handleClickModal={handleClickModal} />
       <Main handleClickModal={handleClickModal} />
-      <BlackDivider />
+
       <Footer />
       <ReturnToTop />
       <AgreementModal

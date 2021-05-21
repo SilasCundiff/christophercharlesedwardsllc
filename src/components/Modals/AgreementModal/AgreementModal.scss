@@ -3,4 +3,39 @@
 
 .AgreementModal {
   @include modalStyles($color-deepblack);
+  @include for-desktop-up {
+    padding: 0 10%;
+    text-align: center;
+  }
+  & .notice {
+    width: 80%;
+    margin-bottom: 6vh;
+    margin-top: auto;
+    text-align: left;
+    padding: 1rem 0.8rem;
+    @include for-desktop-up {
+      text-align: center;
+    }
+    & strong {
+      font-size: calc(24px + 4vw);
+      color: $color-complementary;
+    }
+    & .list {
+      font-size: calc(16px + 1vw);
+      & div {
+        margin-top: 1.6rem;
+      }
+    }
+  }
+  & .buttonbox {
+    margin-bottom: auto;
+    & span {
+      position: relative;
+      background-color: $color-tertiary;
+      padding: 2vh 4vw;
+      font-size: calc(16px + 2.2vw);
+      z-index: 2000;
+      cursor: pointer;
+    }
+  }
 }
