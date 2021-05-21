@@ -3,6 +3,7 @@ import './Hero.scss';
 
 import HeroImageSmall from '../../../assets/images/resized/5-mabrafirmmarch2020_6325@0.25x.png';
 import HeroImageMed from '../../../assets/images/resized/5-mabrafirmmarch2020_6325@0.5x.png';
+import HeroImageLarge from '../../../assets/images/resized/5-mabrafirmmarch2020_6325@1x.png';
 
 function Header() {
   return (
@@ -19,7 +20,7 @@ function Header() {
         <img
           src={HeroImageSmall}
           alt='a portrait of Christopher Charles Edwards'
-          srcSet={`${HeroImageSmall} 600w,  ${HeroImageMed} 1200w`}
+          srcSet={`${HeroImageSmall} 300w,  ${HeroImageMed} 768w, ${HeroImageLarge} 1000w`}
         />
       </div>
       <p className='pitch'>

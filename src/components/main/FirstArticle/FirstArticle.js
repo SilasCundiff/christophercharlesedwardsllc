@@ -2,6 +2,7 @@ import React from 'react';
 
 import NewsImageSmall from '../../../assets/images/resized/1-mabrafirmmarch2020_6307@0.25x.png';
 import NewsImageMed from '../../../assets/images/resized/1-mabrafirmmarch2020_6307@0.5x.png';
+import NewsImageLarge from '../../../assets/images/resized/1-mabrafirmmarch2020_6307@1x.png';
 import './FirstArticle.scss';
 const FirstArticle = () => {
   return (
@@ -26,7 +27,7 @@ const FirstArticle = () => {
             <img
               src={NewsImageSmall}
               alt='a portrait of Christopher Charles Edwards'
-              srcSet={`${NewsImageSmall} 600w, ${NewsImageMed} 1200w,`}
+              srcSet={`${NewsImageSmall} 300w, ${NewsImageMed} 768w,${NewsImageLarge} 1000w,`}
               className='portrait'
             />
             <figcaption className='portrait-caption'>
