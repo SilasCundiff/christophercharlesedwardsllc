@@ -8,7 +8,7 @@ const FirstArticle = () => {
   return (
     <div className='FirstArticle' id='Articles'>
       <h2 className='source'>
-        News article from: <br /> the Citizen Newspaper
+        News article from <br /> the Citizen Newspaper
       </h2>
       <div className='permission'>reprinted with express permission</div>
       <hr />

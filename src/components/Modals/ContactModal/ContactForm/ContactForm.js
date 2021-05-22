@@ -68,8 +68,8 @@ const ValidationSchema = Yup.object().shape({
   represented: Yup.string(),
   date: Yup.date().required('Required'),
   message: Yup.string()
-    .min(2, 'Message is to short')
-    .max(1600, 'Message is to long')
+    .min(2, 'Message is too short')
+    .max(1600, 'Message is too long')
     .required('Required'),
 });
 

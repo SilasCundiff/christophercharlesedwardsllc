@@ -29,8 +29,8 @@ function Header() {
         <span className='higlighted'>
           Chris Edwards is a trial lawyer again,
         </span>{' '}
-        now available to represent any serious civil or criminal case, or to
-        help conclude your case as an arbitrator or mediator.
+        now available to represent you in any serious civil or criminal case, or
+        to help conclude your case as an arbitrator or mediator.
       </p>
     </div>
   );
