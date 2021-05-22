@@ -52,17 +52,17 @@
       }
     }
   }
-  & p {
+  & .pitch {
     font-size: calc(16px + 2.2vw);
-
     font-family: $font-merriweather;
     padding: 1rem 0.8rem;
     text-align: justify;
+
     @include for-desktop-up {
       font-size: calc(16px + 1.2vw);
       padding: 3rem 15%;
     }
-    & strong {
+    & .higlighted {
       color: $color-complementary;
     }
   }

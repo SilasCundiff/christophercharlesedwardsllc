@@ -24,7 +24,10 @@ const ListOfCases = () => {
         <li>Condemnations</li>
         <li>Construction Worker Accidents</li>
         <li>Criminal</li>
-        <li>Crime victims</li>
+        <li>
+          Crime victims in unsafe appartments, unsafe buildings, and unsafe
+          parking lot
+        </li>
         <li>Defamation</li>
         <li>Defective & Dangerous Products</li>
         <li>DNA</li>
@@ -51,10 +54,8 @@ const ListOfCases = () => {
         <li>Quadriplegia</li>
         <li>Railroad Worker Injury / FELA</li>
         <li>Scarring/Disfigurement</li>
-        <li>Silicosis - Silica</li>
         <li>Slander</li>
         <li>Spinal Cord Injury</li>
-        <li>Teflon</li>
         <li>Truck Accidents</li>
         <li>Trusts</li>
         <li>Vehicle Accidents</li>

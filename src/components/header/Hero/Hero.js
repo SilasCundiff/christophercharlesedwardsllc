@@ -24,11 +24,13 @@ function Header() {
         />
       </div>
       <p className='pitch'>
-        After a highly successful career as a trial lawyer and hundred of jury
-        trials as a judge, Chris Edwards is a trial lawyer again, now available
-        to represent you through: any - <strong>any</strong> - major civil or
-        criminal case including jury trial - to help conclude your case as an
-        arbitrator or mediator.
+        After a highly successful career as a trial lawyer and hundreds of jury
+        trials as a judge,{' '}
+        <span className='higlighted'>
+          Chris Edwards is a trial lawyer again,
+        </span>{' '}
+        now available to represent any serious civil or criminal case, or to
+        help conclude your case as an arbitrator or mediator.
       </p>
     </div>
   );
