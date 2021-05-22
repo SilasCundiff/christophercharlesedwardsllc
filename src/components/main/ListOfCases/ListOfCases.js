@@ -25,8 +25,8 @@ const ListOfCases = () => {
         <li>Construction Worker Accidents</li>
         <li>Criminal</li>
         <li>
-          Crime victims in unsafe appartments, unsafe buildings, and unsafe
-          parking lot
+          Crime victims in unsafe appartments, <br /> unsafe buildings, and
+          unsafe parking lots
         </li>
         <li>Defamation</li>
         <li>Defective & Dangerous Products</li>
