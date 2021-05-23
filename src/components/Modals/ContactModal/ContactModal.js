@@ -32,7 +32,7 @@ const ContactModal = ({ contactModalOpen, handleClose }) => {
           770-710-6440
         </a>
       </div>
-      <ContactForm />
+      <ContactForm handleClose={handleClose} />
     </div>
   );
 };

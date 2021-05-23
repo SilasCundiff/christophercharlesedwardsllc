@@ -4,9 +4,11 @@
 .TextError {
   color: $color-error;
   padding: 0;
-
-  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1980 - 300)));
-
-  text-align: left;
-  margin-left: 25%;
+  font-size: calc(16px + 1.5vw);
+  text-align: right;
+  margin-right: 15%;
+  font-weight: bold;
+  @include for-desktop-up {
+    font-size: calc(16px + 0.8vw);
+  }
 }

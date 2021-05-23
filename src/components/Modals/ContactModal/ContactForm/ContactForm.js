@@ -24,32 +24,6 @@ const encode = (data) => {
     .join('&');
 };
 
-const onSubmit = (values, actions) => {
-  fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: encode({ 'form-name': 'contact', ...values }),
-  })
-    .then(() => {
-      toast.success('✔ Form Submission Successful!', {
-        position: 'top-center',
-        autoClose: 5000,
-        closeOnClick: true,
-        pauseOnHover: true,
-      });
-      actions.resetForm();
-    })
-    .catch(() => {
-      toast.error('❌ Submit Failed, please try again!', {
-        position: 'top-center',
-        autoClose: 5000,
-        closeOnClick: true,
-        pauseOnHover: true,
-      });
-    })
-    .finally(() => actions.setSubmitting(false));
-};
-
 const PhoneRegExp =
   /^((\\+[0-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
@@ -66,14 +40,43 @@ const ValidationSchema = Yup.object().shape({
     .matches(PhoneRegExp, 'Phone number is invalid')
     .required('Phone number required'),
   represented: Yup.string(),
-  date: Yup.date().required('Required'),
+  date: Yup.date().required('Date is Required'),
   message: Yup.string()
     .min(2, 'Message is too short')
     .max(1600, 'Message is too long')
-    .required('Required'),
+    .required('Message is Required'),
 });
 
-const ContactForm = () => {
+const ContactForm = ({ handleClose }) => {
+  const onSubmit = (values, actions) => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...values }),
+    })
+      .then(() => {
+        toast.success('✔ Form Submission Successful!', {
+          position: 'top-center',
+          autoClose: 4000,
+          closeOnClick: true,
+          pauseOnHover: true,
+        });
+        actions.resetForm();
+        setTimeout(() => {
+          handleClose();
+        }, 5000);
+      })
+      .catch(() => {
+        toast.error('❌ Submit Failed, please try again!', {
+          position: 'top-center',
+          autoClose: 4000,
+          closeOnClick: true,
+          pauseOnHover: true,
+        });
+      })
+      .finally(() => actions.setSubmitting(false));
+  };
+
   return (
     <Formik
       initialValues={initialValues}
