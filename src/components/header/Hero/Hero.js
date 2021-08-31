@@ -1,10 +1,10 @@
 import React from 'react';
 import './Hero.scss';
 
-import HeroImageSmall from '../../../assets/images/resized/5-mabrafirmmarch2020_6325@0.25x.png';
-import HeroImageMed from '../../../assets/images/resized/5-mabrafirmmarch2020_6325@0.5x.png';
-import HeroImageLarge from '../../../assets/images/resized/5-mabrafirmmarch2020_6325.png';
-
+// import HeroImageSmall from '../../../assets/images/resized/5-mabrafirmmarch2020_6325@0.25x.png';
+// import HeroImageMed from '../../../assets/images/resized/5-mabrafirmmarch2020_6325@0.5x.png';
+// import HeroImageLarge from '../../../assets/images/resized/5-mabrafirmmarch2020_6325.png';
+import LowResPhoto from '../../../assets/images/resized/CCE.jpeg';
 function Header() {
   return (
     <div className='Hero'>
@@ -18,9 +18,9 @@ function Header() {
       </div>
       <div className='HeroImage'>
         <img
-          src={HeroImageSmall}
+          src={LowResPhoto}
           alt='a portrait of Christopher Charles Edwards'
-          srcSet={`${HeroImageSmall} 300w,  ${HeroImageMed} 768w, ${HeroImageLarge} 1000w`}
+          srcSet={`${LowResPhoto} 300w,  ${LowResPhoto} 768w, ${LowResPhoto} 1000w`}
         />
       </div>
       <p className='pitch'>
